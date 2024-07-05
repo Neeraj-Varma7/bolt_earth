@@ -31,3 +31,27 @@ body {
     text-wrap: balance;
   }
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+}
+
+button {
+  z-index: 10;
+  /* Ensure the button is above other elements */
+}
+
+.fixed {
+  position: fixed;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease;
+}

@@ -1,0 +1,67 @@
+.chargers-info {
+    background-color: #121212;
+    /* Dark background color */
+    color: white;
+    /* White text color */
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tab.active {
+    border-bottom: 2px solid green;
+}
+
+.chargers-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.chargers-table th,
+.chargers-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.chargers-table th {
+    background-color: #1f1f1f;
+    /* Darker header background */
+}
+
+.status-indicator.operational {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.status-label.charging {
+    color: rgb(0, 255, 89);
+}
+
+.status-label.available {
+    color: green;
+}
+
+button.table-row-button {
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    text-align: left;
+}
+
+button.table-row-button:hover {
+    background-color: #1f1f1f;
+}
+
+/* Add additional styles as needed */

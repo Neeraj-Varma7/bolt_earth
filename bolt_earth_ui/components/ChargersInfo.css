@@ -1,9 +1,8 @@
 .chargers-info {
     background-color: #121212;
-    /* Dark background color */
     color: white;
-    /* White text color */
     padding: 20px;
+    flex: 1;
 }
 
 .tabs {
@@ -33,15 +32,6 @@
 
 .chargers-table th {
     background-color: #1f1f1f;
-    /* Darker header background */
-}
-
-.status-indicator.operational {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: green;
-    border-radius: 50%;
 }
 
 .status-label.charging {
@@ -52,16 +42,40 @@
     color: green;
 }
 
-button.table-row-button {
+.main-container {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    padding: 0;
-    border: none;
-    background: none;
-    text-align: left;
 }
 
-button.table-row-button:hover {
-    background-color: #1f1f1f;
+.charger-list {
+    flex: 2;
 }
 
-/* Add additional styles as needed */
+.charger-details-container {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.square-symbol {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    background-color: black;
+    margin-right: 8px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 20px;
+    font-size: 0;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    margin-right: 10px;
+}

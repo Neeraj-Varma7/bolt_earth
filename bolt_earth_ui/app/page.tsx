@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen bg-black">
       <Sidebar />
-      <Chargers/>
+      <Chargers />
     </main>
   );
 }

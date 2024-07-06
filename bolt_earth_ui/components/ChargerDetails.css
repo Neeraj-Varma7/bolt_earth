@@ -1,0 +1,97 @@
+.charger-details {
+    background-color: #1d1d1d;
+    color: white;
+    padding: 25px;
+    border-radius: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-icons .fa-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tab.active {
+    border-bottom: 2px solid green;
+    color: rgb(0, 255, 89);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.section h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.section button {
+    background: none;
+    border: none;
+    color: rgb(0, 255, 89);
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.charger-details.hidden {
+    display: none;
+}
+
+.charger-details.visible {
+    display: block;
+}

@@ -1,40 +1,50 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTachometerAlt, faChargingStation, faUsers, faTruck, faIdCard, faChartBar, faCog } from '@fortawesome/free-solid-svg-icons';
+import '../styles/Sidebar.css'; // Import the CSS file
 
 const Sidebar = () => {
   return (
-    <div className="w-30 bg-[#272727] text-white flex flex-col">
-      <div className="p-4 flex items-center">
+    <div className="sidebar-container">
+      <div className="logo-container">
         <Image 
           src="/link-thumbnail.png" 
           alt="Bolt Earth Logo" 
-          width={80} 
-          height={80} 
-          className="mr-2"
+          width={100} 
+          height={100} 
+          className="logo-image"
         />
       </div>
-      <nav className="flex-1">
-        <ul className="space-y-2">
-          <Link href='/'><li className="p-2 text-xs hover:bg-gray-700 cursor-pointer">
-            Overview
+      <nav className="nav-container">
+        <ul className="nav-list">
+          <Link href='/'><li className="nav-item">
+            <FontAwesomeIcon icon={faTachometerAlt} className="nav-icon" />
+            <span className="nav-text">Overview</span>
           </li></Link>
-          <Link href='/chargers'><li className="p-2 text-xs bg-gray-700 cursor-pointer">
-            Chargers
+          <Link href='/chargers'><li className="nav-item nav-item-active">
+            <FontAwesomeIcon icon={faChargingStation} className="nav-icon" />
+            <span className="nav-text">Chargers</span>
           </li></Link>
-          <Link href='/users'><li className="p-2 text-xs hover:bg-gray-700 cursor-pointer">
-            Users
+          <Link href='/users'><li className="nav-item">
+            <FontAwesomeIcon icon={faUsers} className="nav-icon" />
+            <span className="nav-text">Users</span>
           </li></Link>
-          <Link href='/vendors'><li className="p-2 text-xs hover:bg-gray-700 cursor-pointer">
-            Vendors
+          <Link href='/vendors'><li className="nav-item">
+            <FontAwesomeIcon icon={faTruck} className="nav-icon" />
+            <span className="nav-text">Vendors</span>
           </li></Link>
-          <Link href='/kyc'><li className="p-2 text-xs hover:bg-gray-700 cursor-pointer">
-            KYC
+          <Link href='/kyc'><li className="nav-item">
+            <FontAwesomeIcon icon={faIdCard} className="nav-icon" />
+            <span className="nav-text">KYC</span>
           </li></Link>
-          <Link href='/reports'><li className="p-2 text-xs hover:bg-gray-700 cursor-pointer">
-            Reports
+          <Link href='/reports'><li className="nav-item">
+            <FontAwesomeIcon icon={faChartBar} className="nav-icon" />
+            <span className="nav-text">Reports</span>
           </li></Link>
-          <Link href='/admin'><li className="p-2 text-xs hover:bg-gray-700 cursor-pointer">
-            Admin
+          <Link href='/admin'><li className="nav-item">
+            <FontAwesomeIcon icon={faCog} className="nav-icon" />
+            <span className="nav-text">Admin</span>
           </li></Link>
         </ul>
       </nav>

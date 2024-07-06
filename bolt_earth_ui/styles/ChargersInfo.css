@@ -1,3 +1,5 @@
+/* Existing styles */
+
 .chargers-info {
     background-color: #121212;
     color: white;
@@ -78,4 +80,30 @@
     border-radius: 20px;
     color: white;
     margin-right: 10px;
+}
+
+.operational-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(4, 149, 55);
+    /* Charging green color */
+}
+
+.operational-status-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* New styles for splitting headers into two lines */
+.split-header {
+    display: inline-block;
+}
+
+.split-header::after {
+    content: attr(data-line1) "\A" attr(data-line2);
+    white-space: pre;
+    display: block;
 }

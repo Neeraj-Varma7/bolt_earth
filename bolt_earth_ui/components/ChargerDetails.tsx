@@ -1,11 +1,9 @@
-// ChargerDetails.js
-
 "use client";
 
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faEdit, faEye, faFlag, faTh } from '@fortawesome/free-solid-svg-icons';
-import './ChargerDetails.css'; // Use the same CSS file for consistency
+import '../styles/ChargerDetails.css'; // Use the same CSS file for consistency
 
 interface Charger {
   uid: string;
@@ -45,29 +43,45 @@ const ChargerDetails: React.FC<ChargerDetailsProps> = ({ charger, onClose }) => 
           Information
         </div>
         <div className="tab">
-           Bookings
+          Bookings
         </div>
         <div className="tab">
-           Stats
+          Stats
         </div>
         <div className="tab">
-           View
+          View
         </div>
       </div>
       <div className="content">
-        <div className="section">
+        <div className="section charger-info">
           <h3><strong>Charger Info </strong><button><FontAwesomeIcon icon={faEdit} /></button></h3>
-          <h6><strong>UID:</strong> {charger.uid}</h6>
-          <h6><strong>Name:</strong> {charger.name}</h6>
-          <h6><strong>Initialized On:</strong> {charger.initializedOn}</h6>
-          <h6><strong>Last Ping:</strong> {charger.lastPing}</h6>
+          <div className="info-pair">
+            <h6><strong>UID:</strong></h6><h6>{charger.uid}</h6>
+          </div>
+          <div className="info-pair">
+            <h6><strong>Name:</strong></h6><h6>{charger.name}</h6>
+          </div>
+          <div className="info-pair">
+            <h6><strong>Initialized On:</strong></h6><h6>{charger.initializedOn}</h6>
+          </div>
+          <div className="info-pair">
+            <h6><strong>Last Ping:</strong></h6><h6>{charger.lastPing}</h6>
+          </div>
         </div>
-        <div className="section">
+        <div className="section owner-info">
           <h3><strong>Owner Info</strong><button><FontAwesomeIcon icon={faEdit} /></button></h3>
-          <h6><strong>Name:</strong> {charger.ownerName}</h6>
-          <h6><strong>Phone Number:</strong> {charger.phoneNumber}</h6>
-          <h6><strong>Alternate Phone 1:</strong> {charger.alternatePhone1 || '-'}</h6>
-          <h6><strong>Alternate Phone 2:</strong> {charger.alternatePhone2 || '-'}</h6>
+          <div className="info-pair">
+            <h6><strong>Name:</strong></h6><h6>{charger.ownerName}</h6>
+          </div>
+          <div className="info-pair">
+            <h6><strong>Phone Number:</strong></h6><h6>{charger.phoneNumber}</h6>
+          </div>
+          <div className="info-pair">
+            <h6><strong>Alternate Phone 1:</strong></h6><h6>{charger.alternatePhone1 || '-'}</h6>
+          </div>
+          <div className="info-pair">
+            <h6><strong>Alternate Phone 2:</strong></h6><h6>{charger.alternatePhone2 || '-'}</h6>
+          </div>
         </div>
       </div>
     </div>

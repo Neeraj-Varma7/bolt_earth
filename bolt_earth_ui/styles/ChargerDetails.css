@@ -95,3 +95,20 @@
 .charger-details.visible {
     display: block;
 }
+
+/* Add specific styles for charger-info and owner-info sections */
+.charger-info {
+    background-color: #252525;
+    /* Darker background for Charger Info */
+}
+
+.owner-info {
+    background-color: #252525;
+    /* Darker background for Owner Info */
+}
+
+.info-pair {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

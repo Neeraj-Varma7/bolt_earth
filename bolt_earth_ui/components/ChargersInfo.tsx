@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ChargersInfo.css'; // Assuming you have a CSS file for styling
+import '../styles/ChargersInfo.css'; // Assuming you have a CSS file for styling
 import ChargerDetails from './ChargerDetails';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faDownload, faFilter } from '@fortawesome/free-solid-svg-icons'; // Importing the faSearch and faDownload icons
@@ -24,14 +24,14 @@ const ChargersInfo: React.FC = () => {
     { uid: 'BOLT_00037453', status: 'Available', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: '4 hours ago', energyDispensed: '238.792 kWh', name: '', ownerName: '', phoneNumber: '', alternatePhone1: '', alternatePhone2: '' },
     { uid: 'BOLT_00028926', status: 'Charging', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: 'An hour ago', energyDispensed: '416.962 kWh', name: 'JS carnation EV charger -1', ownerName: 'Ayan Basu', phoneNumber: '+91 91489 19899', alternatePhone1: '', alternatePhone2: '' },
     { uid: 'BOLT_00037453', status: 'Available', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: '4 hours ago', energyDispensed: '238.792 kWh', name: '', ownerName: '', phoneNumber: '', alternatePhone1: '', alternatePhone2: '' },
-      { uid: 'BOLT_00028926', status: 'Charging', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: 'An hour ago', energyDispensed: '416.962 kWh', name: 'JS carnation EV charger -1', ownerName: 'Ayan Basu', phoneNumber: '+91 91489 19899', alternatePhone1: '', alternatePhone2: '' },
+    { uid: 'BOLT_00028926', status: 'Charging', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: 'An hour ago', energyDispensed: '416.962 kWh', name: 'JS carnation EV charger -1', ownerName: 'Ayan Basu', phoneNumber: '+91 91489 19899', alternatePhone1: '', alternatePhone2: '' },
     { uid: 'BOLT_00037453', status: 'Available', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: '4 hours ago', energyDispensed: '238.792 kWh', name: '', ownerName: '', phoneNumber: '', alternatePhone1: '', alternatePhone2: '' },
     { uid: 'BOLT_00028926', status: 'Charging', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: 'An hour ago', energyDispensed: '416.962 kWh', name: 'JS carnation EV charger -1', ownerName: 'Ayan Basu', phoneNumber: '+91 91489 19899', alternatePhone1: '', alternatePhone2: '' },
     { uid: 'BOLT_00037453', status: 'Available', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: '4 hours ago', energyDispensed: '238.792 kWh', name: '', ownerName: '', phoneNumber: '', alternatePhone1: '', alternatePhone2: '' },
-      { uid: 'BOLT_00028926', status: 'Charging', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: 'An hour ago', energyDispensed: '416.962 kWh', name: 'JS carnation EV charger -1', ownerName: 'Ayan Basu', phoneNumber: '+91 91489 19899', alternatePhone1: '', alternatePhone2: '' },
+    { uid: 'BOLT_00028926', status: 'Charging', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: 'An hour ago', energyDispensed: '416.962 kWh', name: 'JS carnation EV charger -1', ownerName: 'Ayan Basu', phoneNumber: '+91 91489 19899', alternatePhone1: '', alternatePhone2: '' },
     { uid: 'BOLT_00037453', status: 'Available', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: '4 hours ago', energyDispensed: '238.792 kWh', name: '', ownerName: '', phoneNumber: '', alternatePhone1: '', alternatePhone2: '' },
     { uid: 'BOLT_00028926', status: 'Charging', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: 'An hour ago', energyDispensed: '416.962 kWh', name: 'JS carnation EV charger -1', ownerName: 'Ayan Basu', phoneNumber: '+91 91489 19899', alternatePhone1: '', alternatePhone2: '' },
-     { uid: 'BOLT_00037453', status: 'Available', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: '4 hours ago', energyDispensed: '238.792 kWh', name: '', ownerName: '', phoneNumber: '', alternatePhone1: '', alternatePhone2: '' },
+
     // Add more charger data as needed
   ];
 
@@ -51,6 +51,7 @@ const ChargersInfo: React.FC = () => {
         <div className="chargers-info">
           <div className="tabs">
             <div className="tab active">Chargers</div>
+            <div className="tab">Booking</div>
             <div className="tab">
               <FontAwesomeIcon icon={faFilter} style={{ fontSize: "1.5rem", color: "#ccc", margin: "0 10px" }} />
               <FontAwesomeIcon icon={faDownload} style={{ fontSize: "1.5rem", color: "#ccc", margin: "0 10px" }} />
@@ -67,17 +68,21 @@ const ChargersInfo: React.FC = () => {
           <table className="chargers-table">
             <thead>
               <tr>
-                <th><span className="square-symbol">&#9633;</span> CHARGER UID</th>
+                <th><span className="square-symbol">&#9633;</span> <span className="split-header" data-line1="CHARGER" data-line2="UID"></span></th>
+                <th><span className="split-header" data-line1="OPERATIONAL" data-line2="STATUS"></span></th>
                 <th>STATUS</th>
-                <th>INITIALIZED ON</th>
-                <th>LAST PING</th>
-                <th>ENERGY DISPENSED</th>
+                <th><span className="split-header" data-line1="INITIALIZED" data-line2="ON"></span></th>
+                <th><span className="split-header" data-line1="LAST" data-line2="PING"></span></th>
+                <th><span className="split-header" data-line1="ENERGY" data-line2="DISPENSED"></span></th>
               </tr>
             </thead>
             <tbody>
               {chargers.map((charger, index) => (
                 <tr key={index} onClick={() => handleRowClick(charger)}>
                   <td><span className="square-symbol">&#9633;</span> {charger.uid}</td>
+                  <td className="operational-status-cell">
+                    <span className="operational-circle"></span>
+                  </td>
                   <td><span className={`status-label ${charger.status.toLowerCase()}`}>{charger.status}</span></td>
                   <td>{charger.initializedOn}</td>
                   <td>{charger.lastPing}</td>

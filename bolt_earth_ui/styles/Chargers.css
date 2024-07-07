@@ -1,0 +1,85 @@
+.chargers-container {
+    margin: 20px;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.search-input {
+    padding: 8px 8px 8px 40px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    background-color: #000;
+    color: #ccc;
+    outline: none;
+}
+
+.icons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    margin: 20px;
+    flex-grow: 1;
+}
+
+.add-charger-button {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: green;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid green;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.button-icon {
+    margin-right: 5px;
+}
+
+.absolute-charger {
+    position: absolute;
+    top: 0;
+    right: calc(-100% - 10px);
+}

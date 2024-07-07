@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faSun, faTh, faBell, faUser, faPlus } from '@fortawesome/free-solid-svg-icons';
 import ChargersInfo from './ChargersInfo';
+import '../styles/Chargers.css';
 
 type Charger = {
   uid: string;
@@ -30,56 +31,35 @@ const Chargers = () => {
   };
 
   return (
-    <div style={{ margin: "20px" }}>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "10px" }}>
-        <form onSubmit={handleSearchSubmit} style={{ display: "flex", alignItems: "center" }}>
-      <div style={{ display: "flex", alignItems: "center", position: "relative" }}>
-        <FontAwesomeIcon icon={faSearch} style={{ position: "absolute", left: "10px", fontSize: "1.5rem", color: "#ccc" }} />
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={handleSearchChange}
-          placeholder="Jump to..."
-          style={{
-            padding: "8px 8px 8px 40px", // Adjust padding to accommodate the icon
-            fontSize: "1rem",
-            borderRadius: "4px",
-            border: "1px solid #ccc",
-            minWidth: "200px",
-            backgroundColor: "#000",
-            color: "#ccc",
-            outline: "none",
-          }}
-        />
-      </div>
-    </form>
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <FontAwesomeIcon icon={faSun} style={{ fontSize: "1.5rem", color: "#ccc" }} />
-          <FontAwesomeIcon icon={faTh} style={{ fontSize: "1.5rem", color: "#ccc" }} />
-          <FontAwesomeIcon icon={faBell} style={{ fontSize: "1.5rem", color: "#ccc" }} />
-          <FontAwesomeIcon icon={faUser} style={{ fontSize: "1.5rem", color: "#ccc" }} />
+    <div className="chargers-container">
+      <div className="search-bar-container">
+        <form onSubmit={handleSearchSubmit} className="search-form">
+          <div className="search-input-container">
+            <FontAwesomeIcon icon={faSearch} className="search-icon" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              placeholder="Jump to..."
+              className="search-input"
+            />
+          </div>
+        </form>
+        <div className="icons-container">
+          <FontAwesomeIcon icon={faSun} className="icon" />
+          <FontAwesomeIcon icon={faTh} className="icon" />
+          <FontAwesomeIcon icon={faBell} className="icon" />
+          <FontAwesomeIcon icon={faUser} className="icon" />
         </div>
       </div>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "10px" }}>
-        <h1 style={{ fontSize: "2.5rem", margin: "20px", flexGrow: 1 }}>Chargers</h1>
-        <button
-          style={{
-            display: "flex",
-            alignItems: "center",
-            backgroundColor: "#000",
-            color: "green",
-            padding: "5px 10px",
-            borderRadius: "20px",
-            border: "2px solid green",
-            cursor: "pointer",
-            marginLeft: "10px",
-          }}
-        >
-          <FontAwesomeIcon icon={faPlus} style={{ marginRight: "5px" }} /> Add Charger
+      <div className="header-container">
+        <h1 className="header-title">Chargers</h1>
+        <button className="add-charger-button">
+          <FontAwesomeIcon icon={faPlus} className="button-icon" /> Add Charger
         </button>
         {selectedCharger && (
-          <div style={{ position: "absolute", top: 0, right: "calc(-100% - 10px)" }}>
-            <FontAwesomeIcon icon={faPlus} style={{ marginRight: "5px" }} /> Add Charger
+          <div className="absolute-charger">
+            <FontAwesomeIcon icon={faPlus} className="button-icon" /> Add Charger
           </div>
         )}
       </div>
@@ -89,4 +69,3 @@ const Chargers = () => {
 };
 
 export default Chargers;
-

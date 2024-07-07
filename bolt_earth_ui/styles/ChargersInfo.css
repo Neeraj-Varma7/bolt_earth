@@ -1,5 +1,3 @@
-/* Existing styles */
-
 .chargers-info {
     background-color: #121212;
     color: white;
@@ -88,7 +86,6 @@
     height: 20px;
     border-radius: 50%;
     background-color: rgb(4, 149, 55);
-    /* Charging green color */
 }
 
 .operational-status-cell {
@@ -97,7 +94,6 @@
     align-items: center;
 }
 
-/* New styles for splitting headers into two lines */
 .split-header {
     display: inline-block;
 }

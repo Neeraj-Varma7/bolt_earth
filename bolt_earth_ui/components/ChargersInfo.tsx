@@ -31,8 +31,6 @@ const ChargersInfo: React.FC = () => {
     { uid: 'BOLT_00028926', status: 'Charging', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: 'An hour ago', energyDispensed: '416.962 kWh', name: 'JS carnation EV charger -1', ownerName: 'Ayan Basu', phoneNumber: '+91 91489 19899', alternatePhone1: '', alternatePhone2: '' },
     { uid: 'BOLT_00037453', status: 'Available', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: '4 hours ago', energyDispensed: '238.792 kWh', name: '', ownerName: '', phoneNumber: '', alternatePhone1: '', alternatePhone2: '' },
     { uid: 'BOLT_00028926', status: 'Charging', operationalStatus: 'Operational', initializedOn: 'Jul 02, 2024', lastPing: 'An hour ago', energyDispensed: '416.962 kWh', name: 'JS carnation EV charger -1', ownerName: 'Ayan Basu', phoneNumber: '+91 91489 19899', alternatePhone1: '', alternatePhone2: '' },
-
-    // Add more charger data as needed
   ];
 
   const [selectedCharger, setSelectedCharger] = useState<Charger | null>(null);

@@ -98,13 +98,11 @@
 
 /* Add specific styles for charger-info and owner-info sections */
 .charger-info {
-    background-color: #252525;
-    /* Darker background for Charger Info */
+    background-color: #000000;
 }
 
 .owner-info {
-    background-color: #252525;
-    /* Darker background for Owner Info */
+    background-color: #000000;
 }
 
 .info-pair {

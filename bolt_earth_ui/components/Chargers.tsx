@@ -26,7 +26,6 @@ const Chargers = () => {
 
   const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Handle search functionality here
     console.log("Search query:", searchQuery);
   };
 

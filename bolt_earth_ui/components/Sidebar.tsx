@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTachometerAlt, faChargingStation, faUsers, faTruck, faIdCard, faChartBar, faCog } from '@fortawesome/free-solid-svg-icons';
 import '../styles/Sidebar.css'; // Import the CSS file
+import React from "react";
 
 const Sidebar = () => {
   return (

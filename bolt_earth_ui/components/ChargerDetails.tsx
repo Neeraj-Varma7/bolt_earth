@@ -3,7 +3,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faEdit, faEye, faFlag, faTh } from '@fortawesome/free-solid-svg-icons';
-import '../styles/ChargerDetails.css'; // Use the same CSS file for consistency
+import '../styles/ChargerDetails.css';
 
 interface Charger {
   uid: string;

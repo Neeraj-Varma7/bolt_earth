@@ -1,11 +1,10 @@
 import React from 'react'
 import Sidebar from '@/components/Sidebar'
 
-const charger = () => {
+const chargers = () => {
   return <>
     <Sidebar/>
-    <div>charger</div>
     </>
 }
 
-export default charger
+export default chargers

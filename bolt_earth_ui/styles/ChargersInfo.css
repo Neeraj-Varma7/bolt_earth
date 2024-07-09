@@ -4,8 +4,7 @@
     padding: 20px;
     flex: 1;
     overflow-y: auto;
-    max-height: calc(100vh - 150px);
-    /* Add overflow-y for vertical scroll */
+    max-height: calc(100vh - 150px); 
 }
 
 .tabs {

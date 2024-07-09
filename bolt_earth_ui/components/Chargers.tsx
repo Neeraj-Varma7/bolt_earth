@@ -1,11 +1,11 @@
-"use client"; // Environment directive for client-side usage
+"use client"; // Environment directive for client-side usage since next considers this code fot service side
 
 import React, { useState } from 'react'; // Import React and useState hook
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon for icon usage
-import { faSearch, faSun, faTh, faBell, faUser, faPlus } from '@fortawesome/free-solid-svg-icons'; // Import specific icons from FontAwesome
-import ChargersInfo from './ChargersInfo'; // Import ChargersInfo component
-import '../styles/Chargers.css'; // Import CSS styles for Chargers component
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import { faSearch, faSun, faTh, faBell, faUser, faPlus } from '@fortawesome/free-solid-svg-icons'; 
+import ChargersInfo from './ChargersInfo'; 
+import '../styles/Chargers.css'; 
 
 type Charger = {
   uid: string;
@@ -22,13 +22,12 @@ const Chargers = () => {
   const [searchQuery, setSearchQuery] = useState<string>(''); // State to manage search query string
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value); // Update search query state on input change
+    setSearchQuery(event.target.value); 
   };
 
   const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Handle search functionality here
-    console.log("Search query:", searchQuery); // Log search query to console
+    console.log("Search query:", searchQuery); // sample function
   };
 
   return (
@@ -47,20 +46,20 @@ const Chargers = () => {
           </div>
         </form>
         <div className="icons-container">
-          <FontAwesomeIcon icon={faSun} className="icon" /> {/* Sun icon */}
-          <FontAwesomeIcon icon={faTh} className="icon" /> {/* Th icon */}
-          <FontAwesomeIcon icon={faBell} className="icon" /> {/* Bell icon */}
-          <FontAwesomeIcon icon={faUser} className="icon" /> {/* User icon */}
+          <FontAwesomeIcon icon={faSun} className="icon" />
+          <FontAwesomeIcon icon={faTh} className="icon" /> 
+          <FontAwesomeIcon icon={faBell} className="icon" /> 
+          <FontAwesomeIcon icon={faUser} className="icon" /> 
         </div>
       </div>
       <div className="header-container">
-        <h1 className="header-title">Chargers</h1> {/* Title for Chargers */}
+        <h1 className="header-title">Chargers</h1> {/* Title for page */}
         <button className="add-charger-button">
           <FontAwesomeIcon icon={faPlus} className="button-icon" /> Add Charger {/* Button to add charger */}
         </button>
         {selectedCharger && (
           <div className="absolute-charger">
-            <FontAwesomeIcon icon={faPlus} className="button-icon" /> Add Charger {/* Absolute positioned add charger */}
+            <FontAwesomeIcon icon={faPlus} className="button-icon" /> Add Charger
           </div>
         )}
       </div>

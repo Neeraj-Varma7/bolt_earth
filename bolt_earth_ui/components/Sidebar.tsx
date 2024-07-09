@@ -2,13 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTachometerAlt, faChargingStation, faUsers, faTruck, faIdCard, faChartBar, faCog } from '@fortawesome/free-solid-svg-icons';
-import '../styles/Sidebar.css'; // Import the CSS file
+import '../styles/Sidebar.css'; 
 
 const Sidebar = () => {
   return (
     <div className="sidebar-container">
-      <div className="logo-container">
-        <Image 
+      <div className="logo-container">{/* This is to display the bolt earth image */}
+        <Image                        
           src="/link-thumbnail.png" 
           alt="Bolt Earth Logo" 
           width={100} 
@@ -22,7 +22,7 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faTachometerAlt} className="nav-icon" />
             <span className="nav-text">Overview</span>
           </li></Link>
-          <Link href='/chargers'><li className="nav-item nav-item-active">
+          <Link href='/chargers'><li className="nav-item nav-item-active"> {/* This is active to display currently we are on this page*/}
             <FontAwesomeIcon icon={faChargingStation} className="nav-icon" />
             <span className="nav-text">Chargers</span>
           </li></Link>
@@ -52,4 +52,5 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Sidebar; // Export Sidebar component
+ 
